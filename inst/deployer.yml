@@ -1,0 +1,49 @@
+# Annotated example configuration for deployr - customise as you see fit.
+
+# The values here match up with the defaults.  By default nothing is
+# required (including the presence of a configuration file).
+
+# Specify an R version (or versions) to control the R version.  By
+# default we'll target the R version that is currently running.  You
+# can provide multiple versions like:
+#
+# r_version:
+#   - 3.2.3
+#   - 3.3.3
+#
+# The special values 'release' and 'oldrel' are allowed and the
+# corresponding R versions will be looked up.  These can be mixed with
+# version numbers.
+#
+# There are some caveats though; only 2-number versions are
+# recognised; for version number x.y.z, R packages are built for the
+# most recent 'z' so only different values of x.y will produce
+# distinct packages.
+r_version: ~
+
+# The target platform to download binaries binaries for.  By default
+# this downloads for all platforms, but you can specify "windows" to
+# download only windows binaries or "source" to download only source
+target: ~
+
+# Download all "suggested" dependencies of the package list?  By
+# default this is false but set to true and (potentially many)
+# packages will be downloaded.
+suggests: false
+
+# Optionally you can change the location of the package list.  By
+# default it will be stored in the file 'packages.txt'.  This path is
+# interpreted relative to the deploy root
+packages: ~
+
+# Optionally you can change the location of the package sources.  By
+# default it will be stored in the file 'packages_sources.txt'.  This
+# path is interpreted relative to the deploy root
+package_sources: ~
+
+# Toggle downloading of various useful tools.  By default these are
+# all downloaded.
+git: true
+r: true
+rstudio: true
+rtools: true
