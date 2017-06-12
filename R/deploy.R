@@ -34,8 +34,6 @@ deploy <- function(path, progress = TRUE) {
   target <- cfg$target %||% "ALL"
   suggests <- cfg$suggests
 
-  browser()
-
   ## Then we start the fun part:
   provisionr::download_cran(packages, path, r_version, target, suggests,
                             package_sources, progress)
