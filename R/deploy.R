@@ -46,7 +46,7 @@ deploy <- function(path, progress = TRUE) {
     if (cfg$rtools) {
       path_rtools <- file.path(path, "rtools")
       dir.create(path_rtools, FALSE, TRUE)
-      provisionr:::download_rtools(path_tools, r_version, progress = progress)
+      provisionr:::download_rtools(path_rtools, r_version, progress = progress)
     }
   }
 
