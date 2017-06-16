@@ -8,4 +8,4 @@ before_install:
   - cp ci/DESCRIPTION .
 
 script:
-  - R -e 'nomad::pack(".")'
+  - R -e 'nomad::pack(".", progress = FALSE)'
