@@ -1,0 +1,11 @@
+language: r
+sudo: false
+cache: packages
+
+# Copy the metadata needed to get this working on travis/appveyor down
+# into repo root
+before_script:
+  - cp ci/DESCRIPTION .
+
+script:
+  - R -e 'nomad::pack(".")'
