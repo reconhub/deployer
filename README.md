@@ -15,3 +15,17 @@ The *RECON deployer* project focusses on distributing an R environment for outbr
 * some other packages hosted on github, required by the above
 
 * scripts to permit seemless installation of the local CRAN and github packages 
+
+## Running it
+
+Install nomad
+
+```
+devtools::install_github("reconhub/nomad", upgrade = FALSE)
+```
+
+In this directory, run
+
+```
+nomad::pack(".")
+```
