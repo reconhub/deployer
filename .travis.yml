@@ -4,7 +4,7 @@ cache: packages
 
 # Copy the metadata needed to get this working on travis/appveyor down
 # into repo root
-before_script:
+before_install:
   - cp ci/DESCRIPTION .
 
 script:
