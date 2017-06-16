@@ -1,0 +1,15 @@
+# Let's pin things to a specific R version
+r_version: 3.4.0
+
+# All platforms (this is the default)
+target: ALL
+
+# Download all "suggested" dependencies of the package list?  If set
+# to true (potentially many) more packages will be downloaded.
+suggests: false
+
+# All extras:
+git: true
+r: true
+rstudio: true
+rtools: true
