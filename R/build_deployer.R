@@ -12,12 +12,12 @@
 #'
 
 build_deployer <- function(dir = getwd(), remove_config = TRUE) {
-    normalizePath(dir)
     if (!dir.exists(dir)) {
         cat("\nCreating directory:", dir)
         dir.create(dir)
     }
     
+    dir <- normalizePath(dir)
     odir <- getwd()
     on.exit(setwd(odir))
 
