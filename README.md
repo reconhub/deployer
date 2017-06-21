@@ -26,8 +26,22 @@ Install nomad
 devtools::install_github("reconhub/nomad", upgrade = FALSE)
 ```
 
-In this directory, run
+Then execute the following script in a directory where you want to install the
+RECON Deployer:
 
 ```
-nomad::pack(".")
+## source install script
+source("https://raw.githubusercontent.com/reconhub/deployer/master/R/build_deployer.R")
+
+## create temporary directory
+target_dir <- tempdir()
+target_dir
+
+
+## run install script
+build_deployer(target_dir)
+
+## check content of new directory
+dir(target_dir)
+
 ```
