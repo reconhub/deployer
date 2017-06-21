@@ -1,4 +1,3 @@
-# The first part of this list is packages currently available on CRAN
 abc
 abc.data
 abd
@@ -983,10 +982,3 @@ Zelig
 zipcode
 zoo
 zoom
-
-buildr
-context
-queuer
-rfiglet
-rrq
-syncr
