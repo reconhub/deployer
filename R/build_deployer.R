@@ -22,7 +22,7 @@ build_deployer <- function(dir = getwd(), remove_config = TRUE) {
     on.exit(setwd(odir))
 
     cat("\nSetting working directory...")
-    set(dir)
+    setwd(dir)
     
     cat("\nDownloading config files...")
     utils::download.file("https://raw.githubusercontent.com/reconhub/deployer/master/nomad.yml", 
