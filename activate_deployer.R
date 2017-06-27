@@ -20,11 +20,26 @@ activate_deployer <- function(path = getwd()) {
   }
 
 
+  ## check sha1 hash of all files in bin/drat/extra/src
+  if (!require(digest)) {
+    msg <- "'digest' not installed - cannot verify checksum"
+    warning(msg)
+  } else {
+    hash <- digest::sha1(dir(expected, recursive = TRUE))
+    ref <- "379cb9b5a585b9c7c4340a644c4f189f3aecaef8"
+    if (!identical(ref, hash)) {
+      warning("sha1 signature is wrong - integrity of deployer compromised")
+    } else {
+      message("  // sha1 signature verified")
+    }
+  }
+
+
   ## Set up RECON deployer as default package repository:
 
   deployer_dir <- paste0("file://", normalizePath(path))
   options(repos = deployer_dir)
-  message("Set deployer as local CRAN respository.")
+  message("  // setting deployer as local CRAN respository")
 
 
   install_devel <- function(pkg) {
@@ -40,7 +55,7 @@ activate_deployer <- function(path = getwd()) {
   }
 
   assign("install_devel", install_devel, envir = .GlobalEnv)
-  message("Added 'install_devel' function to global environment.")
+  message("  // adding 'install_devel' function to global environment")
   cat("\n")
   message("Example to install CRAN package 'outbreaks':")
   message("install.packages(\"outbreaks\")")
