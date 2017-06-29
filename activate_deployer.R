@@ -37,7 +37,8 @@ activate_deployer <- function(path = getwd()) {
 
   ## Set up RECON deployer as default package repository:
 
-  deployer_dir <- paste0("file://", normalizePath(path))
+  deployer_dir <- paste0("file:///", normalizePath(path))
+  deployer_dir <- sub("file:////", "file:///", deployer_dir)
   options(repos = deployer_dir)
   message("  // setting deployer as local CRAN respository")
 
