@@ -3,7 +3,6 @@ repo::https://dide-tools.github.io/drat
 
 # Example of a non-CRAN package directly installed (the @master is
 # optional but included so that release branch syntax is more obvious)
-richfitz/rfiglet@master
 reconhub/outbreaks@release
 reconhub/shinyHelpers@release
 reconhub/recon.ui@release
