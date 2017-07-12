@@ -3,7 +3,7 @@
 ## script for installing non-CRAN packages in the global environment.
 
 activate_deployer <- function(path = getwd(), use_local_lib = FALSE,
-                              check_sha1 = TRUE) {
+                              check_integrity = TRUE) {
 
     ## Check that content is there
 
@@ -22,7 +22,7 @@ activate_deployer <- function(path = getwd(), use_local_lib = FALSE,
 
 
     ## check sha1 hash of all files in bin/drat/extra/src
-    if (check_sha1) {
+    if (check_integrity) {
         if (!require(digest)) {
             msg <- "'digest' not installed - cannot verify checksum"
             warning(msg)
