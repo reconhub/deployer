@@ -33,10 +33,10 @@ activate_deployer <- function(path = getwd(), use_local_lib = FALSE,
             hash <- digest::sha1(dir(folders_to_check, recursive = TRUE))
             ref <- "3601375addcaf651235ed5bf1e4d6aeed25c1bb0"
             if (!identical(ref, hash)) {
-                message("\n/// Verifying sha1 signature: wrong signature detected.")
+                message("\n/// Checking deployer integrity: wrong sha1 signature detected.")
                 warning("sha1 signature is wrong - integrity of deployer may be compromised")
             } else {
-                message("\n/// Verifying sha1 signature: all good!")
+                message("\n/// Checking deployer integrity: all good!")
             }
         }
     }
