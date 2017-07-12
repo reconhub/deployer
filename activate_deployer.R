@@ -26,7 +26,7 @@ activate_deployer <- function(path = getwd()) {
     warning(msg)
   } else {
     hash <- digest::sha1(dir(expected, recursive = TRUE))
-    ref <- "379cb9b5a585b9c7c4340a644c4f189f3aecaef8"
+    ref <- "3601375addcaf651235ed5bf1e4d6aeed25c1bb0"
     if (!identical(ref, hash)) {
       warning("sha1 signature is wrong - integrity of deployer compromised")
     } else {
@@ -43,25 +43,25 @@ activate_deployer <- function(path = getwd()) {
   message("  // setting deployer as local CRAN respository")
 
 
-  install_devel <- function(pkg) {
-    devel_dir <- normalizePath(
-      paste(path,
-            "drat/src/contrib/", sep = "/"))
+  ## install_devel <- function(pkg) {
+  ##   devel_dir <- normalizePath(
+  ##     paste(path,
+  ##           "drat/src/contrib/", sep = "/"))
 
-    pkg_src <- dir(devel_dir, pattern = pkg, full = TRUE)
-    if (length(pkg_src) == 0L) {
-      stop("package", pkg_src, "not found")
-    }
-    install.packages(pkg_src, type = "source", repos = NULL)
-  }
+  ##   pkg_src <- dir(devel_dir, pattern = pkg, full = TRUE)
+  ##   if (length(pkg_src) == 0L) {
+  ##     stop("package", pkg_src, "not found")
+  ##   }
+  ##   install.packages(pkg_src, type = "source", repos = NULL)
+  ## }
 
-  assign("install_devel", install_devel, envir = .GlobalEnv)
-  message("  // adding 'install_devel' function to global environment")
-  cat("\n")
+  ## assign("install_devel", install_devel, envir = .GlobalEnv)
+  ## message("  // adding 'install_devel' function to global environment")
+  ## cat("\n")
   message("Example to install CRAN package 'outbreaks':")
   message("install.packages(\"outbreaks\")")
   cat("\n")
   message("Example to install devel package 'earlyR':")
-  message("install_devel(\"earlyR\")")
+  message("install.packages(\"earlyR\")")
 
 }
