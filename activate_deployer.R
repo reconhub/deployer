@@ -2,66 +2,77 @@
 ## folder. It will set up the deployer as local CRAN repository, and add a
 ## script for installing non-CRAN packages in the global environment.
 
-activate_deployer <- function(path = getwd()) {
+activate_deployer <- function(path = getwd(), use_local_lib = FALSE,
+                              check_sha1 = TRUE) {
 
-  ## Check that content is there
+    ## Check that content is there
 
-  expected <- c("bin", "drat", "extra", "src")
-  present <- dir(path)
-  missing <- expected[!expected %in% present]
-  if (length(missing) > 0L) {
-    msg <- paste("Folder \"", path, "\"",
-                 "doesn't look like a RECON deployer.\n",
-                 "\nThe following elements are missing:\n",
-                 paste(missing, collapse = ", "),
-                 "\n\nPlease check the path and try again."
-                 )
-    stop(msg)
-  }
-
-
-  ## check sha1 hash of all files in bin/drat/extra/src
-  if (!require(digest)) {
-    msg <- "'digest' not installed - cannot verify checksum"
-    warning(msg)
-  } else {
-    hash <- digest::sha1(dir(expected, recursive = TRUE))
-    ref <- "3601375addcaf651235ed5bf1e4d6aeed25c1bb0"
-    if (!identical(ref, hash)) {
-      warning("sha1 signature is wrong - integrity of deployer compromised")
-    } else {
-      message("  // sha1 signature verified")
+    expected <- c("bin", "drat", "extra", "src")
+    present <- dir(path)
+    missing <- expected[!expected %in% present]
+    if (length(missing) > 0L) {
+        msg <- paste("Folder \"", path, "\"",
+                     "doesn't look like a RECON deployer.\n",
+                     "\nThe following elements are missing:\n",
+                     paste(missing, collapse = ", "),
+                     "\n\nPlease check the path and try again."
+                     )
+        stop(msg)
     }
-  }
 
 
-  ## Set up RECON deployer as default package repository:
+    ## check sha1 hash of all files in bin/drat/extra/src
+    if (check_sha1) {
+        if (!require(digest)) {
+            msg <- "'digest' not installed - cannot verify checksum"
+            warning(msg)
+        } else {
+            folders_to_check <- paste(normalizePath(path, winslash = "/"),
+                                      expected, sep = "/")
+     
+            hash <- digest::sha1(dir(folders_to_check, recursive = TRUE))
+            ref <- "3601375addcaf651235ed5bf1e4d6aeed25c1bb0"
+            if (!identical(ref, hash)) {
+                message("\n/// Verifying sha1 signature: wrong signature detected.")
+                warning("sha1 signature is wrong - integrity of deployer may be compromised")
+            } else {
+                message("\n/// Verifying sha1 signature: all good!")
+            }
+        }
+    }
 
-  deployer_dir <- paste0("file:///", normalizePath(path))
-  deployer_dir <- sub("file:////", "file:///", deployer_dir)
-  options(repos = deployer_dir)
-  message("  // setting deployer as local CRAN respository")
+    
+    ## Set up RECON deployer as default package repository:
+
+    deployer_dir <- paste0("file:///", normalizePath(path))
+    deployer_dir <- sub("file:////", "file:///", deployer_dir)
+    options(repos = deployer_dir)
+    
+    message("\n/// Setting deployer as local cran respository //")
+    message("// packages will be installed from: ")
+    message(deployer_dir)
 
 
-  ## install_devel <- function(pkg) {
-  ##   devel_dir <- normalizePath(
-  ##     paste(path,
-  ##           "drat/src/contrib/", sep = "/"))
+    ## set local lib in deployer folder
 
-  ##   pkg_src <- dir(devel_dir, pattern = pkg, full = TRUE)
-  ##   if (length(pkg_src) == 0L) {
-  ##     stop("package", pkg_src, "not found")
-  ##   }
-  ##   install.packages(pkg_src, type = "source", repos = NULL)
-  ## }
+    if (use_local_lib) {    
+        new_lib_path <- paste(normalizePath(path, winslash = "/"),
+                              "library", sep = "/")
+        
+        if (!dir.exists(new_lib_path)) {
+            dir.create(new_lib_path)
+        }
+        .libPaths(c(new_lib_path, .libPaths()))
 
-  ## assign("install_devel", install_devel, envir = .GlobalEnv)
-  ## message("  // adding 'install_devel' function to global environment")
-  ## cat("\n")
-  message("Example to install CRAN package 'outbreaks':")
-  message("install.packages(\"outbreaks\")")
-  cat("\n")
-  message("Example to install devel package 'earlyR':")
-  message("install.packages(\"earlyR\")")
+        message("\n/// Setting up new library in the deployer folder //")
+        message("// packages will be installed by default in:")
+        message(new_lib_path)
+    }
+
+    message("\n/// Examples: installing packages //")
+    message("// install CRAN package 'outbreaks':")
+    message("install.packages(\"outbreaks\")")
+    message("\n// install devel package 'earlyR':")
+    message("install.packages(\"earlyR\")\n")
 
 }
