@@ -16,47 +16,38 @@ build_deployer <- function(dir = getwd(), remove_config = TRUE) {
         cat("\nCreating directory:", dir)
         dir.create(dir)
     }
-    
+
     dir <- normalizePath(dir)
     odir <- getwd()
     on.exit(setwd(odir))
 
-    cat("\nSetting working directory...")
+    message("\nSetting working directory...")
     setwd(dir)
-    
-    cat("\nDownloading config files...")
-    utils::download.file("https://raw.githubusercontent.com/reconhub/deployer/master/nomad.yml", 
+
+    message("\nDownloading config files...")
+    utils::download.file("https://raw.githubusercontent.com/reconhub/deployer/master/nomad.yml",
                          destfile = "nomad.yml")
-    utils::download.file("https://raw.githubusercontent.com/reconhub/deployer/master/package_list.txt", 
+    utils::download.file("https://raw.githubusercontent.com/reconhub/deployer/master/package_list.txt",
                          destfile = "package_list.txt")
-    utils::download.file("https://raw.githubusercontent.com/reconhub/deployer/master/package_sources.txt", 
+    utils::download.file("https://raw.githubusercontent.com/reconhub/deployer/master/package_sources.txt",
                          destfile = "package_sources.txt")
 
 
-    cat("\nStarting nomad deployment...")
+    message("\nStarting nomad deployment...")
     nomad::pack(".")
 
     if (remove_config) {
-        cat("\nRemoving config files...")
+        message("\nRemoving config files...")
         file.remove("nomad.yml", "package_list.txt", "package_sources.txt")
     }
-    
-    cat("\nAdding example package install file...")
 
-    code_expl <- c(
-        "## RECON deployer is used for installing R packages without internet",
-        "## This small example illustrates how it works.",
-        "\n",
-        "## Set up RECON deployer as default package repository:", 
-        paste0("options(repos = \"file://", dir, "\")"),
-        "\n",
-        "## Example 1: install a CRAN package as usual:",
-        "install.packages(\"outbreaks\")",
-        "\n",
-        "## Example 2: install a devel package - no difference:",
-        "install.packages(\"projections\")")
+    message("\nDownloading activation script...")
+    utils::download.file("https://raw.githubusercontent.com/reconhub/deployer/master/activate_deployer.R",
+                         destfile = "activate_deployer.R")
+    message("\nDone!")
 
-    cat(code_expl, sep = "\n", file = "example_use_deployer.R")
-    
-    cat("\nDone!")
+    message("\nDownloading documentation...")
+    utils::download.file("https://raw.githubusercontent.com/reconhub/deployer/master/README_deployer.html",
+                         destfile = "README_deployer.html")
+    message("\nDone!")
 }
