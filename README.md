@@ -1,6 +1,6 @@
-# deployer
 
-[![Build Status](https://travis-ci.org/reconhub/deployer.svg?branch=master)](https://travis-ci.org/reconhub/deployer)
+![deployer-logo](http://github.com/reconhub/deployer/raw/master/img/logo-deployer.png)
+
 
 The *RECON deployer* project focusses on distributing an R environment for outbreak response on a thumb drive. This environment should provide:
 
