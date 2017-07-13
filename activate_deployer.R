@@ -3,7 +3,7 @@
 ## script for installing non-CRAN packages in the global environment.
 
 activate_deployer <- function(path = getwd(), use_local_lib = FALSE,
-                              check_integrity = TRUE) {
+                              check_integrity = FALSE) {
 
     ## Check that content is there
 
@@ -29,7 +29,7 @@ activate_deployer <- function(path = getwd(), use_local_lib = FALSE,
         } else {
             folders_to_check <- paste(normalizePath(path, winslash = "/"),
                                       expected, sep = "/")
-     
+
             hash <- digest::sha1(dir(folders_to_check, recursive = TRUE))
             ref <- "3601375addcaf651235ed5bf1e4d6aeed25c1bb0"
             if (!identical(ref, hash)) {
@@ -41,13 +41,13 @@ activate_deployer <- function(path = getwd(), use_local_lib = FALSE,
         }
     }
 
-    
+
     ## Set up RECON deployer as default package repository:
 
     deployer_dir <- paste0("file:///", normalizePath(path))
     deployer_dir <- sub("file:////", "file:///", deployer_dir)
     options(repos = deployer_dir)
-    
+
     message("\n/// Setting deployer as local cran respository //")
     message("// packages will be installed from: ")
     message(deployer_dir)
@@ -55,10 +55,10 @@ activate_deployer <- function(path = getwd(), use_local_lib = FALSE,
 
     ## set local lib in deployer folder
 
-    if (use_local_lib) {    
+    if (use_local_lib) {
         new_lib_path <- paste(normalizePath(path, winslash = "/"),
                               "library", sep = "/")
-        
+
         if (!dir.exists(new_lib_path)) {
             dir.create(new_lib_path)
         }

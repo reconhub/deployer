@@ -48,6 +48,6 @@ build_deployer <- function(dir = getwd(), remove_config = TRUE) {
 
     message("\nDownloading documentation...")
     utils::download.file("https://raw.githubusercontent.com/reconhub/deployer/master/README_deployer.html",
-                         destfile = "README_deployer.html")
+                         destfile = "README.html")
     message("\nDone!")
 }

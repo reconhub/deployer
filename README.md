@@ -18,9 +18,11 @@ The *RECON deployer* project focusses on distributing an R environment for outbr
 
 * scripts to permit seemless installation of the local CRAN and github packages 
 
-## Running it
 
-Install nomad
+
+## Building a new *deployer*
+
+To build a new deployer, you first need to install `nomad`:
 
 ```
 devtools::install_github("reconhub/nomad", upgrade = FALSE)
@@ -45,3 +47,14 @@ build_deployer(target_dir)
 dir(target_dir)
 
 ```
+
+
+
+## Using a *deployer*
+
+The *RECON deployer* is meant to be copied on a USB stick, although strictly
+speaking it is medium-agnostic. To use the *deployer*, go to the folder where it
+is stored, open the file called `README.html`, and follow the instructions
+provided there.
+
+
