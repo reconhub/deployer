@@ -1,5 +1,5 @@
 
-<img src="https://github.com/reconhub/deployer/raw/master/img/logo-deployer.png">
+<img src="recom_logo.png">
 
 <br>
 
