@@ -1,5 +1,5 @@
 
-![recon_deployer_logo](img/logo-deployer.png)
+![recon_deployer_logo](img/logo_deployer.png)
 
 <br>
 

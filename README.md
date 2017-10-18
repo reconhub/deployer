@@ -1,5 +1,5 @@
 
-<img src="recom_logo.png">
+<img src="inst/img/logo_deployer.png">
 
 <br>
 
