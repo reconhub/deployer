@@ -1,0 +1,6 @@
+
+"\n/// Examples: installing packages //"
+"// install CRAN package 'outbreaks':"
+"install.packages(\"outbreaks\")"
+"\n// install devel package 'earlyR':"
+"install.packages(\"earlyR\")\n"
