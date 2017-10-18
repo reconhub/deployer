@@ -24,30 +24,17 @@ The *RECON deployer* project focusses on distributing an R environment for outbr
 
 ## Building a new *deployer*
 
-To build a new deployer, you first need to install `nomad`:
+The RECON Deployer is an application of `nomad`, a R package for creating
+portable R environments. You first need to install this package:
 
 ```
 devtools::install_github("reconhub/nomad", upgrade = FALSE)
 ```
 
-Then execute the following script in a directory where you want to install the
-RECON Deployer:
+To create a deployer in a given directory `foo/`, type:
 
 ```
-## source install script
-source("https://raw.githubusercontent.com/reconhub/deployer/master/R/build_deployer.R")
-
-## create temporary directory
-target_dir <- tempdir()
-target_dir
-
-
-## run install script
-build_deployer(target_dir)
-
-## check content of new directory
-dir(target_dir)
-
+nomad::build("reconhub/deployer", "foo")
 ```
 
 
