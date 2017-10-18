@@ -1,9 +1,0 @@
-Package: deployer
-Title: Not A Package
-Version: 0.0.1
-Author: Rich FitzJohn
-Maintainer: Rich FitzJohn <rich.fitzjohn@gmail.com>
-Description: This exists to support testing the reconhub deployment on CI
-License: MIT + file LICENSE
-Imports: nomad
-Remotes: reconhub/nomad
