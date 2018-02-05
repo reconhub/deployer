@@ -7,16 +7,10 @@ reconhub/outbreaks@release
 reconhub/shinyHelpers@release
 reconhub/recon.ui@release
 reconhub/recontools@release
-reconhub/distcrete@release
-reconhub/incidence@release
 reconhub/incidence.ui@release
-reconhub/epicontacts@release
 reconhub/epicontacts.ui@release
-reconhub/epitrix@release
-reconhub/projections@release
-reconhub/earlyR@release
 reconhub/dibbler@release
-reconhub/outbreaker2@release
+reconhub/vimes@release
 reconhub/branchr@release
 
 ## tidyverse/ggplot2

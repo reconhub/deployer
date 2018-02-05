@@ -996,5 +996,6 @@ epitrix
 projections
 earlyR
 dibbler
+vimes
 outbreaker2
 branchr
