@@ -9,8 +9,8 @@ ____                            _            _
 /// Examples: installing packages //
 
 // install CRAN package 'outbreaks':
-install.packages(\outbreaks\)
+install.packages(\"outbreaks\")
 
 // install devel package 'earlyR':
-install.packages(\earlyR\)
+install.packages(\"earlyR\")
 
