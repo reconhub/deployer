@@ -8,9 +8,9 @@ ____                            _            _
 
 /// Examples: installing packages //
 
-// install CRAN package 'outbreaks':
+// install stable (CRAN) version of package 'outbreaks':
 install.packages(\"outbreaks\")
 
-// install devel package 'earlyR':
+// install devel (github) version of package 'earlyR':
 install.packages(\"earlyR\")
 
