@@ -1,8 +1,11 @@
 # Non-CRAN package repsositories that we use
+
 repo::https://dide-tools.github.io/drat
+
 
 # Example of a non-CRAN package directly installed (the @master is
 # optional but included so that release branch syntax is more obvious)
+
 reconhub/outbreaks@release
 reconhub/shinyHelpers@release
 reconhub/recon.ui@release
@@ -12,6 +15,14 @@ reconhub/epicontacts.ui@release
 reconhub/dibbler@release
 reconhub/vimes@release
 reconhub/branchr@release
+reconhub/nomad@release
+
+
+# Other packages
+
+richfitz/dde
+mrc-ide/odin
+
 
 ## tidyverse/ggplot2
 ## ropensci/plotly
