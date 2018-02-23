@@ -1,5 +1,5 @@
-# Let's pin things to a specific R version
-r_version: 3.4.2
+# Use whatever the current version of R is
+r_version: release
 
 # All platforms (this is the default)
 target: ALL
@@ -16,5 +16,5 @@ rtools: true
 
 # label the release
 name: deployer
-version: "1.0"
+version: "1.1"
 
