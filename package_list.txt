@@ -563,6 +563,8 @@ nws
 nycflights13
 oai
 odin
+odin.ui
+orderly
 OpenMx
 openNLP
 openNLPdata
