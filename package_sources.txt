@@ -7,11 +7,11 @@ repo::https://dide-tools.github.io/drat
 # optional but included so that release branch syntax is more obvious)
 
 reconhub/outbreaks@release
-reconhub/incidence@release
-reconhub/epicontacts@release
-reconhub/epitrix@release
-reconhub/earlyR@release
-reconhub/projections@release
+# reconhub/incidence@release
+# reconhub/epicontacts@release
+# reconhub/epitrix@release
+# reconhub/earlyR@release
+# reconhub/projections@release
 annecori/EpiEstim@release
 reconhub/dibbler@release
 reconhub/vimes@release
@@ -22,7 +22,7 @@ reconhub/shinyHelpers@release
 reconhub/recon.ui@release
 reconhub/incidence.ui@release
 reconhub/epicontacts.ui@release
-
+reconhub/reportfactory@release
 
 # Other packages
 

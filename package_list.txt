@@ -734,6 +734,7 @@ rematch
 remotes
 rentrez
 repmis
+reportfactory
 reportr
 reports
 repr
