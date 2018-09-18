@@ -8,10 +8,13 @@ repo::https://dide-tools.github.io/drat
 
 reconhub/outbreaks@release
 # reconhub/incidence@release
-# reconhub/epicontacts@release
+reconhub/epicontacts@release
 # reconhub/epitrix@release
 # reconhub/earlyR@release
 # reconhub/projections@release
+
+# Pakcages currently only on github
+
 annecori/EpiEstim@release
 reconhub/dibbler@release
 reconhub/vimes@release
