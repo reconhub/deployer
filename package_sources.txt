@@ -12,6 +12,7 @@ reconhub/epicontacts@release
 # reconhub/epitrix@release
 # reconhub/earlyR@release
 # reconhub/projections@release
+reconhub/epiflows@release
 
 # Pakcages currently only on github
 
