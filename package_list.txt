@@ -874,6 +874,7 @@ sirt
 sjmisc
 sjPlot
 sjstats
+skimr
 slackr
 slam
 Sleuth2

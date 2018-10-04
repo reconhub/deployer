@@ -3,30 +3,29 @@
 repo::https://dide-tools.github.io/drat
 
 
-# Example of a non-CRAN package directly installed (the @master is
-# optional but included so that release branch syntax is more obvious)
+# Example of a non-CRAN package directly installed
 
-reconhub/outbreaks@release
-# reconhub/incidence@release
-reconhub/epicontacts@release
-# reconhub/epitrix@release
-# reconhub/earlyR@release
-# reconhub/projections@release
-reconhub/epiflows@release
+# reconhub/outbreaks
+# reconhub/incidence
+reconhub/epicontacts
+# reconhub/epitrix
+# reconhub/earlyR
+# reconhub/projections
+# reconhub/epiflows
 
 # Pakcages currently only on github
 
-annecori/EpiEstim@release
-reconhub/dibbler@release
-reconhub/vimes@release
-reconhub/branchr@release
-reconhub/nomad@release
-reconhub/recontools@release
-reconhub/shinyHelpers@release
-reconhub/recon.ui@release
-reconhub/incidence.ui@release
-reconhub/epicontacts.ui@release
-reconhub/reportfactory@release
+annecori/EpiEstim
+reconhub/dibbler
+reconhub/vimes
+reconhub/branchr
+reconhub/nomad
+reconhub/recontools
+reconhub/shinyHelpers
+reconhub/recon.ui
+reconhub/incidence.ui
+reconhub/epicontacts.ui
+reconhub/reportfactory
 
 # Other packages
 
