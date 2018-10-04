@@ -1,5 +1,5 @@
 
-<img src="inst/img/logo_deployer.png">
+<img src="inst/img/logo_deployer.png" width="600px">
 
 <br>
 
