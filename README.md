@@ -31,10 +31,11 @@ portable R environments. You first need to install this package:
 devtools::install_github("reconhub/nomad", upgrade = FALSE)
 ```
 
-To create a deployer in a given directory `foo/`, type:
+To create a deployer in a given directory named `deployer_[date]`, type:
 
 ```
-nomad::build("reconhub/deployer", "foo")
+out_dir <- paste("deployer", gsub("-", "_", Sys.Date()), sep = "_")
+nomad::build("reconhub/deployer", out_dir)
 ```
 
 
