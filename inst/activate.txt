@@ -11,6 +11,6 @@
 // install stable (CRAN) version of package 'outbreaks':
 install.packages("outbreaks")
 
-// install devel (github) version of package 'earlyR':
-install.packages("earlyR")
+// install devel (github) version of package 'reportfactory':
+install.packages("reportfactory")
 

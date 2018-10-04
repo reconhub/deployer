@@ -90,6 +90,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -144,24 +147,24 @@ $(document).ready(function () {
 <h3>Windows</h3>
 <p>Go to the <code>extra</code> folder, and install, in this order:</p>
 <ol style="list-style-type: decimal">
-<li>Git (<code>Git-2.13.1-64-bit.exe</code>)</li>
+<li>Git (<code>Git-2.19.0-64-bit.exe</code>)</li>
 <li>Rtools (<code>Rtools34.exe</code>)</li>
-<li>R (<code>R-3.4.0-win.exe</code>)</li>
-<li>RStudio (<code>RStudio-1.0.143.exe</code>)</li>
+<li>R (<code>R-3.5.1-win.exe</code>)</li>
+<li>RStudio (<code>RStudio-1.1.456.exe</code>)</li>
 </ol>
 </div>
 <div id="linux-macosx" class="section level3">
 <h3>Linux / MacOSX</h3>
 <p>On linux or MacOSX, it is assumed that the toolchain for package development is already installed on the system, but we provide:</p>
 <ul>
-<li><p>R sources, which can be used to compile R (<code>R-3.5.0.tar.gz</code>); see guidelines below ’<em>compiling R</em></p></li>
-<li><p><code>RStudio-1.1.453.dmg</code>: Rstudio for MacOSX systems, installed as usual MacOSX packages</p></li>
-<li><p><code>rstudio-1.1.453-amd64.deb</code>: Rstudio for Linux debian-based systems (including Ubuntu); can by installed by typing <code>sudo dpkg -i rstudio-1.1.453-amd64.deb</code></p></li>
-<li><p><code>rstudio-1.1.453-x86_64.rpm</code>: Rstudio for Linux redhat based systems; can by installed by typing <code>sudo rpm -i rstudio-1.1.453-x86_64.rpm</code></p></li>
+<li><p>R sources, which can be used to compile R (<code>R-3.5.1.tar.gz</code>); see guidelines below ’<em>compiling R</em></p></li>
+<li><p><code>RStudio-1.1.456.dmg</code>: Rstudio for MacOSX systems, installed as usual MacOSX packages</p></li>
+<li><p><code>rstudio-1.1.456-amd64.deb</code>: Rstudio for Linux debian-based systems (including Ubuntu); can by installed by typing <code>sudo dpkg -i rstudio-1.1.456-amd64.deb</code></p></li>
+<li><p><code>rstudio-1.1.456-x86_64.rpm</code>: Rstudio for Linux redhat based systems; can by installed by typing <code>sudo rpm -i rstudio-1.1.456-x86_64.rpm</code></p></li>
 </ul>
 <p>To compile and install R from the sources, open a terminal where the <code>.tar.gz</code> file is located and type the following commands:</p>
-<pre class="r"><code>tar xvfz R-3.5.0.tar.gz
-cd R-3.5.0
+<pre class="r"><code>tar xvfz R-3.5.1.tar.gz
+cd R-3.5.1
 ./configure
 make 
 sudo make install</code></pre>
@@ -190,13 +193,13 @@ sudo make install</code></pre>
 // install stable (CRAN) version of package 'outbreaks':
 install.packages(&quot;outbreaks&quot;)
 
-// install devel (github) version of package 'earlyR':
-install.packages(&quot;earlyR&quot;)
+// install devel (github) version of package 'reportfactory':
+install.packages(&quot;reportfactory&quot;)
 </code></pre>
 <p>You can then install CRAN packages as usual (but without internet), for instance:</p>
 <pre class="r"><code>install.packages(&quot;outbreaks&quot;)</code></pre>
-<p>Non-CRAN packages are installed exactly the same way as CRAN packages; for instance, to install <code>earlyR</code>, use:</p>
-<pre class="r"><code>install.packages(&quot;earlyR&quot;)</code></pre>
+<p>Non-CRAN packages are installed exactly the same way as CRAN packages; for instance, to install <code>reportfactory</code>, use:</p>
+<pre class="r"><code>install.packages(&quot;reportfactory&quot;)</code></pre>
 <p><br> <br></p>
 </div>
 </div>

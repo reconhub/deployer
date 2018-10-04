@@ -1,6 +1,6 @@
 
 <div>
-<img src=img/logo_deployer.png alt="recon_deployer_logo" width=600px>
+<img src=img/logo_deployer.png alt="recon_deployer_logo" width="600px">
 </div>
 
 <br>
@@ -42,10 +42,10 @@ an issue on:
 
 Go to the `extra` folder, and install, in this order:
 
-1. Git (`Git-2.13.1-64-bit.exe`)
+1. Git (`Git-2.19.0-64-bit.exe`)
 2. Rtools (`Rtools34.exe`)
-3. R (`R-3.4.0-win.exe`)
-4. RStudio (`RStudio-1.0.143.exe`)
+3. R (`R-3.5.1-win.exe`)
+4. RStudio (`RStudio-1.1.456.exe`)
 
 
 ### Linux / MacOSX
@@ -53,24 +53,24 @@ Go to the `extra` folder, and install, in this order:
 On linux or MacOSX, it is assumed that the toolchain for package development is
 already installed on the system, but we provide:
 
-- R sources, which can be used to compile R (`R-3.5.0.tar.gz`); see guidelines
+- R sources, which can be used to compile R (`R-3.5.1.tar.gz`); see guidelines
   below '*compiling R*
   
-- `RStudio-1.1.453.dmg`: Rstudio for MacOSX systems, installed as usual MacOSX
+- `RStudio-1.1.456.dmg`: Rstudio for MacOSX systems, installed as usual MacOSX
   packages
 
-- `rstudio-1.1.453-amd64.deb`: Rstudio for Linux debian-based systems (including
-  Ubuntu); can by installed by typing `sudo dpkg -i rstudio-1.1.453-amd64.deb`
+- `rstudio-1.1.456-amd64.deb`: Rstudio for Linux debian-based systems (including
+  Ubuntu); can by installed by typing `sudo dpkg -i rstudio-1.1.456-amd64.deb`
 
-- `rstudio-1.1.453-x86_64.rpm`: Rstudio for Linux redhat based systems; can by
-  installed by typing `sudo rpm -i rstudio-1.1.453-x86_64.rpm`
+- `rstudio-1.1.456-x86_64.rpm`: Rstudio for Linux redhat based systems; can by
+  installed by typing `sudo rpm -i rstudio-1.1.456-x86_64.rpm`
 
 To compile and install R from the sources, open a terminal where the `.tar.gz`
 file is located and type the following commands:
 
 ```{r eval = FALSE}
-tar xvfz R-3.5.0.tar.gz
-cd R-3.5.0
+tar xvfz R-3.5.1.tar.gz
+cd R-3.5.1
 ./configure
 make 
 sudo make install
@@ -111,8 +111,8 @@ you should see an output resembling:
 // install stable (CRAN) version of package 'outbreaks':
 install.packages("outbreaks")
 
-// install devel (github) version of package 'earlyR':
-install.packages("earlyR")
+// install devel (github) version of package 'reportfactory':
+install.packages("reportfactory")
 
 ```
 
@@ -124,10 +124,10 @@ install.packages("outbreaks")
 ```
 
 Non-CRAN packages are installed exactly the same way as CRAN packages; for
-instance, to install `earlyR`, use:
+instance, to install `reportfactory`, use:
 
 ```{r eval = FALSE}
-install.packages("earlyR")
+install.packages("reportfactory")
 ```
 
 <br>
