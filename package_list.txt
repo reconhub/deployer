@@ -438,6 +438,7 @@ learnr
 lfe
 lhs
 likert
+linelist
 linprog
 lintr
 listviewer
