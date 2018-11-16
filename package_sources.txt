@@ -8,6 +8,7 @@ repo::https://dide-tools.github.io/drat
 # reconhub/outbreaks
 # reconhub/incidence
 reconhub/epicontacts
+reconhub/linelist
 # reconhub/epitrix
 # reconhub/earlyR
 # reconhub/projections
