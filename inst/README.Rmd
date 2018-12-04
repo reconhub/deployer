@@ -48,22 +48,34 @@ Go to the `extra` folder, and install, in this order:
 4. RStudio (`RStudio-1.1.456.exe`)
 
 
-### Linux / MacOSX
+### MacOS
 
-On linux or MacOSX, it is assumed that the toolchain for package development is
+It is assumed that command line tools and git are already installed on the
+system, but we provide both R and RStudio as binaries:
+
+
+- `R-3.5.1.pkg`: R installer for MacOS. Install by double-clicking and following
+  the instructions.
+- `RStudio-1.1.456.dmg`: Rstudio for MacOS systems, installed as usual MacOS
+  apps by dragging the application to the `Applications` folder.
+
+
+### Linux
+
+It is assumed that the toolchain for package development is
 already installed on the system, but we provide:
-
-- R sources, which can be used to compile R (`R-3.5.1.tar.gz`); see guidelines
-  below '*compiling R*
-  
-- `RStudio-1.1.456.dmg`: Rstudio for MacOSX systems, installed as usual MacOSX
-  packages
 
 - `rstudio-1.1.456-amd64.deb`: Rstudio for Linux debian-based systems (including
   Ubuntu); can by installed by typing `sudo dpkg -i rstudio-1.1.456-amd64.deb`
 
 - `rstudio-1.1.456-x86_64.rpm`: Rstudio for Linux redhat based systems; can by
   installed by typing `sudo rpm -i rstudio-1.1.456-x86_64.rpm`
+
+To install R, see the next section on installing R from source:
+
+### From Source
+
+We have included R sources, which can be used to compile R (`R-3.5.1.tar.gz`).
 
 To compile and install R from the sources, open a terminal where the `.tar.gz`
 file is located and type the following commands:
@@ -82,22 +94,24 @@ sudo make install
 
 ## Installing packages using the *deployer*
 
-To install packages using the *RECON deployer* instead of internet, you need
-to:
+To install packages using the *RECON deployer* instead of internet, you need to:
 
-1. activate the deployer by sourcing the script `activate.R`, located at the
-   root of the deployer
+1. Double-click on `deployer.Rproj` to open RStudio to this directory.
+1. Activate the deployer by sourcing the script `activate.R`, located at the
+   root of the deployer (use `source("activate.R")`)
 2. install packages as usual (the deployer replaces your internet connection)
 
 
-To activate the deployer on windows, the easiest approach is to open the
-deployer folder, open the script `activate.R` using Rstudio, and type in the R
-console:
+To activate the deployer on windows or MacOS, the easiest approach is to open
+the deployer folder, double click on `deployer.Rproj` to open RStudio, and type
+in the R console:
+
 ```{r eval = FALSE}
 source("activate.R")
 ```
 
 you should see an output resembling:
+
 ```
  ____                            _            _ 
 |  _ \ ___  ___ ___  _ __     __| | ___ _ __ | | ___  _   _  ___ _ __ 
