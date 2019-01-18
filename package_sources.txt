@@ -27,6 +27,7 @@ reconhub/recon.ui
 reconhub/incidence.ui
 reconhub/epicontacts.ui
 reconhub/reportfactory
+R4EPI/epireports # for outbreak template
 
 # Other packages
 
