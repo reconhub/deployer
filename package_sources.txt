@@ -27,7 +27,7 @@ reconhub/recon.ui
 reconhub/incidence.ui
 reconhub/epicontacts.ui
 reconhub/reportfactory
-R4EPI/epireports 
+R4EPI/epireports
 
 # Other packages
 
