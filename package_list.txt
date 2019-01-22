@@ -301,12 +301,16 @@ gepaf
 GERGM
 getPass
 GGally
+ggalt
 ggdendro
+ggedit
+ggfortify
 ggmap
 ggmcmc
 ggnetwork
 ggplot2
 ggplot2movies
+ggraph
 ggrepel
 ggsci
 ggthemes
