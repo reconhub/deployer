@@ -35,6 +35,8 @@ richfitz/dde
 mrc-ide/odin@development
 mrc-ide/odin.ui@prototype
 vimc/orderly
+cttobin/ggthemr
+
 
 ## tidyverse/ggplot2
 ## ropensci/plotly

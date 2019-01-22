@@ -310,6 +310,7 @@ ggplot2movies
 ggrepel
 ggsci
 ggthemes
+ggthemr
 ggvis
 gistr
 git2r
