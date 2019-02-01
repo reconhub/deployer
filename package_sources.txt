@@ -7,7 +7,7 @@ repo::https://dide-tools.github.io/drat
 
 # reconhub/outbreaks
 # reconhub/incidence
-reconhub/epicontacts
+reconhub/epicontacts@ttree
 reconhub/linelist
 # reconhub/epitrix
 # reconhub/earlyR
