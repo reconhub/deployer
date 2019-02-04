@@ -97,6 +97,10 @@ sudo make install
 To install packages using the *RECON deployer* instead of internet, you need to:
 
 1. Double-click on `deployer.Rproj` to open RStudio to this directory.
+   (If you do not have RStudio installed, then please make sure you set your
+    working directory to the deployer directory. Open R, copy and past this code,
+   and select the `deployer.Rproj` file from the popup browser: 
+   `setwd(dirname(file.choose()))`)
 1. Activate the deployer by sourcing the script `activate.R`, located at the
    root of the deployer (use `source("activate.R")`)
 2. install packages as usual (the deployer replaces your internet connection)
@@ -143,6 +147,23 @@ instance, to install `reportfactory`, use:
 ```{r eval = FALSE}
 install.packages("reportfactory")
 ```
+
+## Updating a single package/fixing bugs
+
+If you are actively maintaining a deployer in the field, it's not feasible to
+create a brand-new deployerfor every small change to one package you need to
+do. The script `update_deployer.R` has a function called `deploy_package()`
+that will build a deployer package from source and update the repositories in
+the deployer, allowing updates to take place. To use this, simply do the
+following
+
+```{r eval = FALSE}
+source("update_deployer.R")
+deploy_package("../incidence") # build new version of the incidence package,
+                               # assuming the source code is in the directory
+                               # above the deployer. 
+```
+
 
 <br>
 <br>
