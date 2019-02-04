@@ -25,7 +25,7 @@ deploy_package <- function(pkg = NULL, repo = c(here::here(), here::here("drat")
   
 
   for (i in repo) {
-    message(sprintf("Adding source and binary to %", i))
+    message(sprintf("Adding source and binary to %s", i))
     drat::insertPackage(src, 
                         action = "archive", 
                         repodir = i)
