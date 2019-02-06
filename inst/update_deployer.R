@@ -40,7 +40,7 @@ deploy_package <- function(pkg = NULL, repo = ".", internet = FALSE, windows = T
     if (el.capitan) {
       try(elc <- download.packages(pkg, type = "mac.binary.el-capitan", destdir = tmp)[2])
     }
-  } else if (file.exits(pkg)) { # The file is a binary
+  } else if (file.exists(pkg)) { # The file is a binary
     src <- pkg
   } else {
     stop(sprintf("%s doesn't appear to be a file or folder and I can't download it.", pkg))
