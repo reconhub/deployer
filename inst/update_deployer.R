@@ -6,12 +6,12 @@
 #'   available.
 #' @examples
 #'
-#' deploy_package("../linelist") # update the linelist package, assuming its
+#' update_package("../linelist") # update the linelist package, assuming its
 #'   source lives one directory upstream of this deployer
 #'
 #' # download and insert the binary and windows packages for prettydoc
 #' deploy_package("prettydoc", internet = TRUE, windows = TRUE)
-deploy_package <- function(pkg = NULL, repo = ".", internet = FALSE, windows = TRUE, macos = FALSE, el.capitan = macos) {
+update_package <- function(pkg = NULL, repo = ".", internet = FALSE, windows = TRUE, macos = FALSE, el.capitan = macos) {
   if (is.null(pkg)) {
     msg <- paste(
                  "Please supply a path to a package source"
