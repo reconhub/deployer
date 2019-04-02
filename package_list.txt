@@ -42,6 +42,7 @@ assertr
 assertthat
 AUC
 audio
+aweek
 BaBooN
 backports
 base
