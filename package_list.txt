@@ -313,6 +313,7 @@ ggplot2movies
 ggraph
 ggrepel
 ggsci
+ggspatial
 ggthemes
 ggthemr
 ggvis
