@@ -272,6 +272,7 @@ fTrading
 fts
 futile.logger
 futile.options
+fuzzyjoin
 GA
 gam
 gamair
