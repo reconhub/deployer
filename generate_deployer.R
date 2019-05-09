@@ -15,6 +15,8 @@ The files you end up with are:
 <name>_extra.tar binaries for R, git, Rtools, and RStudio
 <name>_macosx.tar binary packages built for macos
 <name>_windows.tar binary packages built for windows
+<name>_md5sums.txt summary of the above files
+<name>_release.md release page to be placed on github
 
 Once downloaded, these can be decompressed via R:
 
