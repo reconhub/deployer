@@ -251,6 +251,7 @@ fit.models
 fitdistrplus
 flashClust
 flexclust
+flexdashboard
 flexmix
 flexsurv
 flextable
@@ -768,6 +769,7 @@ rglwidget
 RgoogleMaps
 rhandsontable
 ring
+rio
 riskRegression
 ritis
 RItools
