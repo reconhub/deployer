@@ -28,8 +28,8 @@ The RECON Deployer is an application of `nomad`, a R package for creating
 portable R environments. You first need to install this package, which also depends on `provisionr`:
 
 ```r
-devtools::install_github("mrc-ide/provisionr", upgrade = FALSE)
-devtools::install_github("reconhub/nomad", upgrade = FALSE)
+remotes::install_github("mrc-ide/provisionr", upgrade = FALSE)
+remotes::install_github("reconhub/nomad", upgrade = FALSE)
 ```
 
 To create a deployer in a given directory named `deployer_[date]`, type:
