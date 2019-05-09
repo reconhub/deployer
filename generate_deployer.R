@@ -54,11 +54,11 @@ tar(sprintf("%s_macosx.tar", out_dir), file.path(out_dir, "bin/macosx"),
     tar = sys_tar)
 
 # calculate and print md5sums
-the_tars  <- tools::md5sum(dir(pattern = "\\.tar$"))
+the_tars  <- tools::md5sum(dir(pattern = sprintf("^%s_(base|windows|macosx|extra)\\.tar$", out_dir)))
 print.tar <- function(x, ...) cat(paste0(x, '  ', names(x)), sep = "\n", ...)
 class(the_tars) <- "tar"
 the_tars
-print.tar(the_tars, file = sprintf("%s_md5sum.txt", out_dir)
+print.tar(the_tars, file = sprintf("%s_md5sum.txt", out_dir))
 
 
 
