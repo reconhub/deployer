@@ -44,7 +44,7 @@ tar(sprintf("%s_extra.tar", out_dir), file.path(out_dir, "extra"),
     extra_flags = "-v",
     tar = sys_tar)
 tar(sprintf("%s_base.tar", out_dir), out_dir,
-    extra_flags = sprintf("-v --exclude=%s/bin --exclude=%s/extra", out_dir),
+    extra_flags = sprintf("-v --exclude=%s/bin --exclude=%s/extra", out_dir, out_dir),
     tar = sys_tar)
 tar(sprintf("%s_windows.tar", out_dir), file.path(out_dir, "bin/windows"),
     extra_flags = "-v",
