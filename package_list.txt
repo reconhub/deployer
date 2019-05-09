@@ -444,6 +444,7 @@ lavaan
 lavaan.survey
 lazyeval
 leaflet
+leaflet.extras
 leaps
 LearnBayes
 learnr

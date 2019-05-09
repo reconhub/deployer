@@ -7,7 +7,7 @@ imsg <- "Usage: Rscript add_packages.R [...]
 "
 args <- commandArgs(trailingOnly = TRUE)
 if (is.na(args[1])) stop(imsg)
-punct <- grepl("[[:punct:]]", args)
+punct <- grepl("[^a-zA-Z0-9._]", args)
 if (any(punct)) {
   pkgs <- paste(args[punct], collapse = "\n")
   message(sprintf("The following packages may need to be added to package_sources.txt:\n%s", pkgs)) 

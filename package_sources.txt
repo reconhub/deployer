@@ -9,10 +9,16 @@ repo::https://dide-tools.github.io/drat
 # reconhub/incidence
 reconhub/epicontacts@ttree
 reconhub/linelist
-# reconhub/epitrix
+reconhub/epitrix
 # reconhub/earlyR
-# reconhub/projections
+reconhub/projections
 # reconhub/epiflows
+ffinger/followup
+reconhub/epirisk
+reconhub/linelist
+reconhub/aweek
+cttobin/ggthemr
+
 
 # Pakcages currently only on github
 
