@@ -68,6 +68,12 @@ message("Creating deployer...")
 
 nomad::build("reconhub/deployer", out_dir)
 
+# Generating README.html -------------------------------------------------------
+
+message("Generating deployer README...")
+
+rmarkdown::render(file.path(out_dir, "README.Rmd"))
+
 # Compress deployers -----------------------------------------------------------
 
 message("Compressing the deployers...")
