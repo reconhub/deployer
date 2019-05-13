@@ -72,7 +72,8 @@ nomad::build("reconhub/deployer", out_dir)
 
 message("Generating deployer README...")
 
-rmarkdown::render(file.path(out_dir, "README.Rmd"))
+# Using try here so that it will continue, even if things fail
+try(rmarkdown::render(file.path(out_dir, "README.Rmd")))
 
 # Compress deployers -----------------------------------------------------------
 
