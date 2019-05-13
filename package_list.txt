@@ -880,6 +880,7 @@ showtextdb
 signal
 SimComp
 SimDesign
+simulacr
 sirt
 sjmisc
 sjPlot
