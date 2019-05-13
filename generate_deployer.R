@@ -11,31 +11,44 @@ This script will do the following:
 
 The files you end up with are:
 
-<name>_base.tar source packages, cheat sheets, and instructions
-<name>_extra.tar binaries for R, git, Rtools, and RStudio
-<name>_macosx.tar binary packages built for macos
-<name>_windows.tar binary packages built for windows
-<name>_md5sums.txt summary of the above files
-<name>_release.md release page to be placed on github
+| File name          | Description                                    |
+|--------------------|------------------------------------------------|
+|`<name>/`           | Source Directory for the deployer              |
+|`<name>_base.tar`   | source packages, cheat sheets, and instructions|
+|`<name>_extra.tar`  | binaries for R, git, Rtools, and RStudio       |
+|`<name>_macosx.tar` | binary packages built for macos                |
+|`<name>_windows.tar`| binary packages built for windows              |
+|`<name>_md5sums.txt`| summary of the above files                     |
+|`<name>_release.md` | release page to be placed on github            |
 
 Once downloaded, these can be decompressed via R:
 
+```r
 untar('<name>_base.tar')
 untar('<name>_extra.tar')
 untar('<name>_macosx.tar')
 untar('<name>_windows.tar')
+```
 
-Usage: Rscript generate_deployer.R <name>
+Usage: Rscript generate_deployer.R [-h|--help] <name>
 
         Arguments:
+        -h,--help print this message and exit
         <name> the name of the new directory in which to create the deployer.
                This defaults to deployer_yyyy_mm_dd
+
 
 "
 
 args <- commandArgs(trailingOnly = TRUE)
 
-out_dir <- if (is.na(args[1])) sprintf("deployer_%s", gsub("-", "_", Sys.Date())) else args[1]
+out_dir <- if (is.na(args[1])) {
+  sprintf("deployer_%s", gsub("-", "_", Sys.Date())) 
+} else if (args[1] == "-h" || args[1] == "--help") { 
+  stop(msg)
+} else { 
+  args[1] 
+}
 
 # Updating packages ------------------------------------------------------------
 
