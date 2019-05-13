@@ -21,12 +21,12 @@ The *RECON deployer* project focusses on distributing an R environment for outbr
 * scripts to permit seemless installation of the local CRAN and github packages 
 
 
-## Using a *deployer* [#using]
+## Using a *deployer*
 
 You can find versioned releases of deployers at 
 https://github.com/reconhub/deployer/releases that detail how the deployer was
 built and how to download/decompress it. If you want to build one from scratch,
-see [Building a new deployer][building]
+see Building a new deployer
 
 The *RECON deployer* is meant to be copied on a USB stick, although strictly
 speaking it is medium-agnostic. To use the *deployer*, go to the folder where it
@@ -34,9 +34,9 @@ is stored, open the file called `README.html`, and follow the instructions
 provided there.
 
 
-## Building a new *deployer* {#building}
+## Building a new *deployer*
 
-To build/generate a new *deployer*, you can use the R script [`generate_deployer.R`]:
+To build/generate a new *deployer*, you can use the R script [`generate_deployer.R`](./generate_deployer.R):
 
 ```
 cd ..
@@ -98,9 +98,9 @@ nomad::build("reconhub/deployer", out_dir)
 ```
 
 
-## Adding or updating packages {#updating}
+## Adding or updating packages 
 
-If you need to add or update an R package, you can use the [`add_packages.R`]
+If you need to add or update an R package, you can use the [`add_packages.R`](./add_packages.R)
 script with the names of the CRAN packages to use.
 
 ```
@@ -108,4 +108,4 @@ Rscript add_packages.R officer kableExtra
 ```
 
 If you have non-cran packages, then be sure to add the github repositories to
-[`package_sources.txt`].
+[`package_sources.txt`](./package_sources.txt).
