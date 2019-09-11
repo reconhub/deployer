@@ -10,7 +10,7 @@ repo::https://dide-tools.github.io/drat
 reconhub/epicontacts@ttree
 reconhub/linelist
 reconhub/epitrix
-# reconhub/earlyR
+reconhub/earlyR
 reconhub/projections
 # reconhub/epiflows
 ffinger/followup
