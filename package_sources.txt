@@ -22,7 +22,7 @@ cttobin/ggthemr
 
 # Pakcages currently only on github
 
-annecori/EpiEstim
+# annecori/EpiEstim
 reconhub/dibbler
 reconhub/vimes
 reconhub/branchr
@@ -34,7 +34,7 @@ reconhub/incidence.ui
 reconhub/epicontacts.ui
 reconhub/reportfactory
 reconhub/simulacr
-R4EPI/epireports
+R4EPI/sitrep
 
 # Other packages
 

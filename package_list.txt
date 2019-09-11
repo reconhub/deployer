@@ -35,6 +35,7 @@ ape
 aplpack
 arm
 arrayhelpers
+arsenal
 arules
 arulesViz
 ascii
@@ -140,12 +141,15 @@ crayon
 crosstalk
 crrstep
 crul
+csvy
 cubature
 Cubist
 curl
 cyclocomp
 d3heatmap
+d3heatmaps
 DAAG
+daff
 data.table
 data.tree
 datasets
@@ -240,6 +244,7 @@ fastmatch
 fastR
 fBasics
 fda
+feather
 ff
 ffbase
 fftw
@@ -270,6 +275,7 @@ fossil
 fpc
 fracdiff
 FRB
+fst
 fTrading
 fts
 futile.logger
@@ -360,6 +366,7 @@ heatmaply
 heplots
 here
 hexbin
+hexView
 hierfstat
 highlight
 highr
@@ -507,6 +514,7 @@ memisc
 memoise
 merTools
 methods
+metricsgraphics
 mets
 mgcv
 mi
@@ -730,6 +738,7 @@ Rcsdp
 RCurl
 readbitmap
 readbulk
+readODS
 readr
 readstata13
 readxl
