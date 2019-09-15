@@ -22,6 +22,8 @@ unless you know what you are doing.**
 
 # About this deployer
 
+This deployer was generated on `r Sys.Date()`
+
 This is the *RECON deployer* version 03.18 (indicating the release date: March
 2018), which is the first stable version we distributed for deployment to the
 field, or in conditions where data analysis is done without a reliable internet
@@ -31,7 +33,7 @@ We do our best to make things work - for real! But if you think you have
 detected a potential bug, have requests, suggestions or questions, please post
 an issue on:
 
-[https://github.com/reconhub/deployer/issues](https://github.com/reconhub/deployer/issues)
+https://github.com/reconhub/deployer/issues
 
 
 # Using the *RECON deployer*
@@ -42,10 +44,10 @@ an issue on:
 
 Go to the `extra` folder, and install, in this order:
 
-1. Git (`Git-2.19.0-64-bit.exe`)
-2. Rtools (`Rtools34.exe`)
-3. R (`R-3.5.1-win.exe`)
-4. RStudio (`RStudio-1.1.456.exe`)
+1. Git (`r dir("./extra", pattern = "Git")`)
+2. Rtools (`r dir("./extra", pattern = "ools")`)
+3. R (`r dir("./extra", pattern = "R-.*.exe")`)
+4. RStudio (`r dir("./extra", pattern = "RStudio-.*.exe")`)
 
 
 ### MacOS
@@ -54,9 +56,9 @@ It is assumed that command line tools and git are already installed on the
 system, but we provide both R and RStudio as binaries:
 
 
-- `R-3.5.1.pkg`: R installer for MacOS. Install by double-clicking and following
+- `r dir("./extra", pattern = "R-.*.pkg")`: R installer for MacOS. Install by double-clicking and following
   the instructions.
-- `RStudio-1.1.456.dmg`: Rstudio for MacOS systems, installed as usual MacOS
+- `r dir("./extra", pattern = "RStudio-.*.dmg")`: Rstudio for MacOS systems, installed as usual MacOS
   apps by dragging the application to the `Applications` folder.
 
 
@@ -65,24 +67,25 @@ system, but we provide both R and RStudio as binaries:
 It is assumed that the toolchain for package development is
 already installed on the system, but we provide:
 
-- `rstudio-1.1.456-amd64.deb`: Rstudio for Linux debian-based systems (including
-  Ubuntu); can by installed by typing `sudo dpkg -i rstudio-1.1.456-amd64.deb`
+- `r dir("./extra", pattern = "rstudio-.*-amd64.deb")`: Rstudio for Linux debian-based systems (including
+  Ubuntu); can by installed by typing `r paste("sudo dpkg -i", dir("./extra", pattern = "rstudio-.*-amd64.deb"))`
 
-- `rstudio-1.1.456-x86_64.rpm`: Rstudio for Linux redhat based systems; can by
-  installed by typing `sudo rpm -i rstudio-1.1.456-x86_64.rpm`
+- `r dir("./extra", pattern = "rstudio-.*-x86_64.rpm")`: Rstudio for Linux redhat based systems; can by
+  installed by typing `r paste("sudo rpm -i", dir("./extra", pattern = "rstudio-.*-x86_64.rpm"))`
 
 To install R, see the next section on installing R from source:
 
 ### From Source
 
-We have included R sources, which can be used to compile R (`R-3.5.1.tar.gz`).
+We have included R sources, which can be used to compile R (`r dir("./extra", pattern = "R-.*.tar.gz")`)
+
 
 To compile and install R from the sources, open a terminal where the `.tar.gz`
 file is located and type the following commands:
 
 ```{r eval = FALSE}
-tar xvfz R-3.5.1.tar.gz
-cd R-3.5.1
+tar xvfz R-.*.tar.gz
+cd R-.*
 ./configure
 make 
 sudo make install

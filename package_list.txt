@@ -35,6 +35,7 @@ ape
 aplpack
 arm
 arrayhelpers
+arsenal
 arules
 arulesViz
 ascii
@@ -140,15 +141,18 @@ crayon
 crosstalk
 crrstep
 crul
+csvy
 cubature
 Cubist
 curl
 cyclocomp
 d3heatmap
+d3heatmaps
 DAAG
-datasets
+daff
 data.table
 data.tree
+datasets
 date
 DBI
 dbplyr
@@ -240,6 +244,7 @@ fastmatch
 fastR
 fBasics
 fda
+feather
 ff
 ffbase
 fftw
@@ -247,12 +252,14 @@ fftwtools
 fields
 filehash
 findpython
-fitdistrplus
 fit.models
+fitdistrplus
 flashClust
 flexclust
+flexdashboard
 flexmix
 flexsurv
+flextable
 FME
 FMStable
 FNN
@@ -268,6 +275,7 @@ fossil
 fpc
 fracdiff
 FRB
+fst
 fTrading
 fts
 futile.logger
@@ -358,6 +366,7 @@ heatmaply
 heplots
 here
 hexbin
+hexView
 hierfstat
 highlight
 highr
@@ -413,6 +422,7 @@ jomo
 jpeg
 jsonlite
 jsonvalidate
+kableExtra
 kappalab
 kernlab
 KernSmooth
@@ -436,11 +446,12 @@ latentnet
 lattice
 latticeExtra
 lava
+lava.tobit
 lavaan
 lavaan.survey
-lava.tobit
 lazyeval
 leaflet
+leaflet.extras
 leaps
 LearnBayes
 learnr
@@ -503,6 +514,7 @@ memisc
 memoise
 merTools
 methods
+metricsgraphics
 mets
 mgcv
 mi
@@ -686,6 +698,13 @@ quantmod
 quantreg
 questionr
 qvcalc
+R.cache
+R.devices
+R.matlab
+R.methodsS3
+R.oo
+R.rsp
+R.utils
 R0
 R2admb
 R2Cuba
@@ -706,7 +725,6 @@ rasterVis
 rbenchmark
 rbokeh
 rbounds
-R.cache
 Rcgmin
 rcmdcheck
 Rcmdr
@@ -718,14 +736,14 @@ RcppEigen
 RcppParallel
 Rcsdp
 RCurl
-R.devices
 readbitmap
 readbulk
+readODS
 readr
 readstata13
 readxl
-recontools
 recon.ui
+recontools
 redux
 REEMtree
 RefManageR
@@ -761,6 +779,7 @@ rglwidget
 RgoogleMaps
 rhandsontable
 ring
+rio
 riskRegression
 ritis
 RItools
@@ -775,9 +794,7 @@ rlecuyer
 RLumShiny
 rmapshaper
 rmarkdown
-R.matlab
 rmeta
-R.methodsS3
 Rmisc
 Rmpfr
 rms
@@ -791,7 +808,6 @@ robust
 robustbase
 ROCR
 RODBC
-R.oo
 Rook
 rootSolve
 rotl
@@ -809,7 +825,6 @@ RPushbullet
 rrcov
 rredis
 rredlist
-R.rsp
 RSAGA
 rsatscan
 RSclient
@@ -828,7 +843,6 @@ RSVGTipsDevice
 rticles
 Rttf2pt1
 RUnit
-R.utils
 rversions
 rvest
 Rvmmin
@@ -881,6 +895,7 @@ showtextdb
 signal
 SimComp
 SimDesign
+simulacr
 sirt
 sjmisc
 sjPlot
