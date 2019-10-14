@@ -102,6 +102,8 @@ cdcfluview
 CDM
 cellranger
 cem
+changepoint
+changepoint.np
 checkmate
 checkpoint
 chron
