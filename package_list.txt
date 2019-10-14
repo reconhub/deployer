@@ -127,6 +127,7 @@ colorspace
 colourpicker
 combinat
 commonmark
+compareDF
 compiler
 CompQuadForm
 contfrac
