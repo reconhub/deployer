@@ -18,7 +18,9 @@ update_package <- function(pkg = NULL, repo = ".", internet = FALSE, windows = T
     )
     stop(msg)
   }
-  src <- win <- mac <- elc <- NULL
+  src  <- win <- mac <- elc <- NULL
+  repo <- normalizePath(repo)
+
   stopifnot(file.exists(file.path(repo, 'src', 'contrib')))
   ext <- tools::file_ext(pkg)
   tmp <- tempdir()
@@ -27,7 +29,7 @@ update_package <- function(pkg = NULL, repo = ".", internet = FALSE, windows = T
   if (ext == "" && dir.exists(pkg)) {
     vers <- read.dcf(file.path(pkg, "DESCRIPTION"))[, "Version"]
     message("Building source package ...")
-    pkg <- devtools::build(pkg, path = tmp, binary = FALSE)
+    src <- pkg <- devtools::build(pkg, path = tmp, binary = FALSE)
   } else if (ext == "" && internet) { # The package is one the user wants to download
     message("Downloading the source package from CRAN ...")
     try(src <- download.packages(pkg, type = "source", destdir = tmp)[2])
@@ -47,24 +49,24 @@ update_package <- function(pkg = NULL, repo = ".", internet = FALSE, windows = T
   }
 
   # adding source package ------------------------------------------------------
-  message(sprintf("Adding source package and to %s", repo))
+  message(sprintf("Adding source package to %s", repo))
   drat::insertPackage(src, action = "archive", repodir = repo) 
 
   # adding windows package -----------------------------------------------------
   if (!is.null(win)) {
-    message(sprintf("Adding windows package and to %s", repo))
+    message(sprintf("Adding windows package to %s", repo))
     try(drat::insertPackage(win, action = "archive", repodir = repo))
   }
 
   # adding macos package -----------------------------------------------------
   if (!is.null(mac)) {
-    message(sprintf("Adding macos package and to %s", repo))
+    message(sprintf("Adding macos package to %s", repo))
     try(drat::insertPackage(mac, action = "archive", repodir = repo))
   }
 
   # adding macos.el-capitan package -----------------------------------------------------
   if (!is.null(mac)) {
-    message(sprintf("Adding macos el-capitan package and to %s", repo))
+    message(sprintf("Adding macos el-capitan package to %s", repo))
     try(drat::insertPackage(elc, action = "archive", repodir = repo))
   }
   # ----------------------------------------------------------------------------
