@@ -397,6 +397,7 @@ igraphdata
 imager
 incidence
 incidence.ui
+incidence2
 inctools
 ineq
 influence.ME
@@ -1000,6 +1001,7 @@ tnam
 tools
 tree
 treespace
+trending
 triangle
 triebeard
 trimcluster
